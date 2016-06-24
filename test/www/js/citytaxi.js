@@ -23,6 +23,9 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
+
+      marker.setPosition(pos);
+      marker.setMap(map);
       geocoder(position.coords.latitude, position.coords.longitude)
       map.setCenter(pos);
     }, function() {
@@ -36,10 +39,6 @@ function initMap() {
 
 function handleLocationError(browserHasGeolocation, pos, marker) {
   marker.setPosition(pos);
-  var marker=new google.maps.Marker({
-    position:myLatlng,
-  });
-
   marker.setMap(map);
   geocoder(5.064084,-75.511013)
 }
