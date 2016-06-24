@@ -49,7 +49,3 @@ function geocoder(lat, lng){
   $("#address").html(address)
 });
 }
-
-function about(){
-  alert("About")
-}
